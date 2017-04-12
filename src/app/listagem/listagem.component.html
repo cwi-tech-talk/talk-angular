@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="text-center">Listagem de filmes</h1>
+  <br />
+  <a  [routerLink]="['/cadastro']" class="btn btn-primary"> Cadastrar </a>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>TÍTULO</th>
+      <th>ATORES</th>
+      <th>DESCRIÇÂO</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of filmes" >
+      <th>{{item.titulo}}</th>
+      <th>{{item.atores}}</th>
+      <th>{{item.descricao}}</th>
+      <th>
+        <a [routerLink]="['/cadastro', item.codigo]" class="btn btn-warning" >Editar</a>
+        <!-- <button class="btn btn-danger" (click) = "excluir(item)">Excluir</button> -->
+        <button class="btn btn-danger" (click) = "excluir(item)">Excluir</button>
+      </th>
+    </tr>
+    </tbody>
+  </table>
+</div>

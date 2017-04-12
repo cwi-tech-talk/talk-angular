@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 class="text-center">Cadastro de filmes</h1>
+
+  <form class="row" (submit) = "cadastrarFilme($event)">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Título</label>
+        <input class="form-control" autocomplete="off" name="titulo" [(ngModel)] = "filme.titulo">
+      </div>
+      <div class="form-group">
+        <label>Atores</label>
+        <input class="form-control" autocomplete="off" name="ateres" [(ngModel)] = "filme.atores">
+      </div>
+      <div class="form-group">
+        <label>Descrição</label>
+        <textarea class="form-control" autocomplete="off" name="teste" [(ngModel)] = "filme.descricao"></textarea>
+      </div>
+
+      <button name="Salvar" class="btn btn-primary" type="submit">Salvar</button>
+
+      <a [routerLink]="['']" class="btn btn-primary">Voltar</a>
+      <hr>
+    </div>
+  </form>
+</div>
